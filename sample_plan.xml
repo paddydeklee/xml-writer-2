@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlanObject>
+   <GenericInfo>
+      <Type>UKR</Type>
+      <Libraries>
+         <Library>
+            <Name>Tibia</Name>
+            <LibrarySource type="Upload">Tibia.stl</LibrarySource>
+         </Library>
+         <Library>
+            <Name>Femur</Name>
+            <LibrarySource type="Upload">Femur.stl</LibrarySource>
+         </Library>
+         <Library>
+            <Name>FemOx</Name>
+            <LibrarySource type="Read"/>
+         </Library>
+         <Library>
+            <Name>TibiaMedOxRight</Name>
+            <LibrarySource type="Read"/>
+         </Library>
+         <Library>
+            <Name>MedOxBear</Name>
+            <LibrarySource type="Read"/>
+         </Library>
+      </Libraries>
+   </GenericInfo>
+   <CaseDetails>
+      <CaseID>3087</CaseID>
+      <Version>1</Version>
+      <Author>SGC</Author>
+      <Date>15-3-1</Date>
+      <Side>Right</Side>
+      <Condyle>Med</Condyle>
+   </CaseDetails>
+   <EditDetails>
+      <Sizes>
+         <Size>
+            <Name>TibSize</Name>
+            <Value>6</Value>
+            <Dataset>AA;A;B;C;D;E;F</Dataset>
+         </Size>
+         <Size>
+            <Name>FemSize</Name>
+            <Value>4</Value>
+            <Dataset>XS;S;M;L;XL</Dataset>
+         </Size>
+         <Size>
+            <Name>BearSize</Name>
+            <Value>2</Value>
+            <Dataset>3mm;6mm</Dataset>
+            <Suffix>FemSize</Suffix>
+         </Size>
+      </Sizes>
+      <ImpRotations>
+         <ImpRotation>
+            <Name>TibRot</Name>
+            <Value X="-6" Y="3" Z="-3.5"/>
+            <MinValue X="-30" Y="-30" Z="-30"/>
+            <MaxValue X="30" Y="30" Z="30"/>
+         </ImpRotation>
+         <ImpRotation>
+            <Name>FemRot</Name>
+            <Value X="-7" Y="0" Z="0"/>
+            <MinValue X="-30" Y="-30" Z="-30"/>
+            <MaxValue X="30" Y="30" Z="30"/>
+         </ImpRotation>
+      </ImpRotations>
+      <ImpTranslations>
+         <ImpTranslation>
+            <Name>TibTrans</Name>
+            <Value X="4.5" Y="0" Z="1"/>
+            <MinValue X="-50" Y="-50" Z="-50"/>
+            <MaxValue X="50" Y="50" Z="50"/>
+         </ImpTranslation>
+         <ImpTranslation>
+            <Name>FemTrans</Name>
+            <Value X="-10.5" Y="-2" Z="0.5"/>
+            <MinValue X="-50" Y="-50" Z="-50"/>
+            <MaxValue X="50" Y="50" Z="50"/>
+         </ImpTranslation>
+      </ImpTranslations>
+      <Rotations>
+         <Rotation>
+            <Name>BearRot</Name>
+            <Value X="0" Y="0" Z="0"/>
+            <Axis X="1" Y="0" Z="0"/>
+            <Centre X="0" Y="0" Z="0"/>
+            <MinValue/>
+            <MaxValue/>
+         </Rotation>
+      </Rotations>
+      <Translations>
+         <Translations>
+            <Name>BearTrans</Name>
+            <Value X="0" Y="0" Z="0"/>
+            <Axis X="1" Y="0" Z="0"/>
+            <MinValue X="-50" Y="-50" Z="-50"/>
+            <MaxValue X="50" Y="50" Z="50"/>
+         </Translations>
+      </Translations>
+   </EditDetails>
+   <LandingPage>
+      <Text> </Text>
+      <Views>
+         <View X="0" Y="1" Z="0" Zoom="2">Anterior-Posterior</View>
+         <View X="1" Y="0" Z="0" Zoom="2">Medial-Lateral</View>
+         <View X="0" Y="0" Z="1" Zoom="2">Axial</View>
+      </Views>
+   </LandingPage>
+   <ApprovePlan>
+      <ScreenShots>
+         <ScreenShot>
+            <Name>TibiaAP</Name>
+            <Thumbnail height="100" width="100"/>
+            <PopupImage height="1000" width="1000"/>
+            <InitialCamera X="0" Y="1" Z="0"/>
+            <Text>Please Review the AP position of the tibial component</Text>
+            <Sections>
+               <Section type="1">
+                  <Title>Tibial Implant Summary</Title>
+                  <Subs>
+                     <Sub>
+                        <Label>Tibial Implant Size</Label>
+                        <Button/>
+                        <Value Units="" ValueIndex="">TibSize</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Posterior Slope</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="1">TibRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Medial Slope</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="2">TibRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Axial Rotation</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="3">TibRot</Value>
+                     </Sub>
+                  </Subs>
+               </Section>
+            </Sections>
+            <STLs>
+               <STL>
+                  <Name>Tibia</Name>
+                  <Size/>
+                  <Material aRed="0.84706" bGreen="0.83137" cBlue="0.74118" dAlpha="0.75" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">0.8944116 -0.4775803 0.00915719 36.55064 0.4710067 0.8850114 0.15181 191.5994 -0.07839959 -0.1278694 0.9886875 86.06053 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+               <STL>
+                  <Name>TibiaMedOxRight</Name>
+                  <Size>TibSize</Size>
+                  <Material aRed="0.3" bGreen="0.3" cBlue="0.3" dAlpha="1" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">1 0 0 18.9999 0 1 0 0 0 0 1 -13.9277 0 0 0 1</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">TibTrans</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">TibRot</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+            </STLs>
+         </ScreenShot>
+         <ScreenShot>
+            <Name>TibiaML</Name>
+            <Thumbnail height="100" width="100"/>
+            <PopupImage height="1000" width="1000"/>
+            <InitialCamera X="-1" Y="0" Z="0"/>
+            <Text>Please Review the AP position of the tibial component</Text>
+            <Sections>
+               <Section type="1">
+                  <Title>Tibial Implant Summary</Title>
+                  <Subs>
+                     <Sub>
+                        <Label>Tibial Implant Size</Label>
+                        <Button/>
+                        <Value Units="" ValueIndex="">TibSize</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Posterior Slope</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="1">TibRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Medial Slope</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="2">TibRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Axial Rotation</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="3">TibRot</Value>
+                     </Sub>
+                  </Subs>
+               </Section>
+            </Sections>
+            <STLs>
+               <STL>
+                  <Name>Tibia</Name>
+                  <Size/>
+                  <Material aRed="0.84706" bGreen="0.83137" cBlue="0.74118" dAlpha="0.75" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">0.8944116 -0.4775803 0.00915719 36.55064 0.4710067 0.8850114 0.15181 191.5994 -0.07839959 -0.1278694 0.9886875 86.06053 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+               <STL>
+                  <Name>TibiaMedOxRight</Name>
+                  <Size>TibSize</Size>
+                  <Material aRed="0.3" bGreen="0.3" cBlue="0.3" dAlpha="1" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">1 0 0 18.9999 0 1 0 0 0 0 1 -13.9277 0 0 0 1</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">TibTrans</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">TibRot</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+            </STLs>
+         </ScreenShot>
+         <ScreenShot>
+            <Name>TibiaAx</Name>
+            <Thumbnail height="100" width="100"/>
+            <PopupImage height="1000" width="1000"/>
+            <InitialCamera X="0" Y="0" Z="1"/>
+            <Text>Please Review the AP position of the tibial component</Text>
+            <Sections>
+               <Section type="1">
+                  <Title>Tibial Implant Summary</Title>
+                  <Subs>
+                     <Sub>
+                        <Label>Tibial Implant Size</Label>
+                        <Button/>
+                        <Value Units="" ValueIndex="">TibSize</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Posterior Slope</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="1">TibRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Medial Slope</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="2">TibRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Axial Rotation</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="3">TibRot</Value>
+                     </Sub>
+                  </Subs>
+               </Section>
+            </Sections>
+            <STLs>
+               <STL>
+                  <Name>Tibia</Name>
+                  <Size/>
+                  <Material aRed="0.84706" bGreen="0.83137" cBlue="0.74118" dAlpha="0.75" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">0.8944116 -0.4775803 0.00915719 36.55064 0.4710067 0.8850114 0.15181 191.5994 -0.07839959 -0.1278694 0.9886875 86.06053 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+               <STL>
+                  <Name>TibiaMedOxRight</Name>
+                  <Size>TibSize</Size>
+                  <Material aRed="0.3" bGreen="0.3" cBlue="0.3" dAlpha="1" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">1 0 0 18.9999 0 1 0 0 0 0 1 -13.9277 0 0 0 1</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">TibTrans</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">TibRot</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+            </STLs>
+         </ScreenShot>
+         <ScreenShot>
+            <Name>FemAP</Name>
+            <Thumbnail height="100" width="100"/>
+            <PopupImage height="1000" width="1000"/>
+            <InitialCamera X="0" Y="1" Z="0"/>
+            <Text>Please Review the AP position of the femoral component</Text>
+            <Sections>
+               <Section type="1">
+                  <Title>Femoral Implant Summary</Title>
+                  <Subs>
+                     <Sub>
+                        <Label>Femoral Implant Size</Label>
+                        <Button/>
+                        <Value Units="" ValueIndex="">FemSize</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Flexion</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="1">FemRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Varus/valgus</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="2">FemRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Axial Rotation</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="3">FemRot</Value>
+                     </Sub>
+                  </Subs>
+               </Section>
+            </Sections>
+            <STLs>
+               <STL>
+                  <Name>Femur</Name>
+                  <Size/>
+                  <Material aRed="0.84706" bGreen="0.83137" cBlue="0.74118" dAlpha="0.75" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">-0.8771883 0.4702914 0.09678133 -19.30742 -0.4710859 -0.8819439 0.01590826 -177.6502 0.09283722 -0.03163778 0.9951785 99.5585 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+               <STL>
+                  <Name>FemOx</Name>
+                  <Size>FemSize</Size>
+                  <Material aRed="0.3" bGreen="0.3" cBlue="0.3" dAlpha="1" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">0.999843 -0.0177413 -1.38778e-17 -13.4546 0.0177413 0.999843 -3.46945e-18 -12.37 -1.38778e-17 -6.93889e-18 1 -4.94627 0 0 0 1</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">FemTrans</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">FemRot</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+            </STLs>
+         </ScreenShot>
+         <ScreenShot>
+            <Name>FemML</Name>
+            <Thumbnail height="100" width="100"/>
+            <PopupImage height="1000" width="1000"/>
+            <InitialCamera X="-1" Y="0" Z="0"/>
+            <Text>Please Review the AP position of the femoral component</Text>
+            <Sections>
+               <Section type="1">
+                  <Title>Femoral Implant Summary</Title>
+                  <Subs>
+                     <Sub>
+                        <Label>Femoral Implant Size</Label>
+                        <Button/>
+                        <Value Units="" ValueIndex="">FemSize</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Flexion</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="1">FemRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Varus/valgus</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="2">FemRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Axial Rotation</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="3">FemRot</Value>
+                     </Sub>
+                  </Subs>
+               </Section>
+            </Sections>
+            <STLs>
+               <STL>
+                  <Name>Femur</Name>
+                  <Size/>
+                  <Material aRed="0.84706" bGreen="0.83137" cBlue="0.74118" dAlpha="0.75" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">-0.8771883 0.4702914 0.09678133 -19.30742 -0.4710859 -0.8819439 0.01590826 -177.6502 0.09283722 -0.03163778 0.9951785 99.5585 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+               <STL>
+                  <Name>FemOx</Name>
+                  <Size>FemSize</Size>
+                  <Material aRed="0.3" bGreen="0.3" cBlue="0.3" dAlpha="1" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">0.999843 -0.0177413 -1.38778e-17 -13.4546 0.0177413 0.999843 -3.46945e-18 -12.37 -1.38778e-17 -6.93889e-18 1 -4.94627 0 0 0 1</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">FemTrans</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">FemRot</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+            </STLs>
+         </ScreenShot>
+         <ScreenShot>
+            <Name>FemAx</Name>
+            <Thumbnail height="100" width="100"/>
+            <PopupImage height="1000" width="1000"/>
+            <InitialCamera X="0" Y="0" Z="-1"/>
+            <Text>Please Review the AP position of the femoral component</Text>
+            <Sections>
+               <Section type="1">
+                  <Title>Femoral Implant Summary</Title>
+                  <Subs>
+                     <Sub>
+                        <Label>Femoral Implant Size</Label>
+                        <Button/>
+                        <Value Units="" ValueIndex="">FemSize</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Flexion</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="1">FemRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Varus/valgus</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="2">FemRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Axial Rotation</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="3">FemRot</Value>
+                     </Sub>
+                  </Subs>
+               </Section>
+            </Sections>
+            <STLs>
+               <STL>
+                  <Name>Femur</Name>
+                  <Size/>
+                  <Material aRed="0.84706" bGreen="0.83137" cBlue="0.74118" dAlpha="0.75" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">-0.8771883 0.4702914 0.09678133 -19.30742 -0.4710859 -0.8819439 0.01590826 -177.6502 0.09283722 -0.03163778 0.9951785 99.5585 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+               <STL>
+                  <Name>FemOx</Name>
+                  <Size>FemSize</Size>
+                  <Material aRed="0.3" bGreen="0.3" cBlue="0.3" dAlpha="1" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">0.999843 -0.0177413 -1.38778e-17 -13.4546 0.0177413 0.999843 -3.46945e-18 -12.37 -1.38778e-17 -6.93889e-18 1 -4.94627 0 0 0 1</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">FemTrans</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">FemRot</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+            </STLs>
+         </ScreenShot>
+         <ScreenShot>
+            <Name>Front</Name>
+            <Thumbnail height="100" width="100"/>
+            <PopupImage height="1000" width="1000"/>
+            <InitialCamera X="-0.707" Y="0.707" Z="0"/>
+            <Text>Please Review the position of both components</Text>
+            <Sections>
+               <Section type="1">
+                  <Title>Tibial Implant Summary</Title>
+                  <Subs>
+                     <Sub>
+                        <Label>Tibial Implant Size</Label>
+                        <Button/>
+                        <Value Units="" ValueIndex="">TibSize</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Posterior Slope</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="1">TibRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Medial Slope</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="2">TibRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Axial Rotation</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="3">TibRot</Value>
+                     </Sub>
+                  </Subs>
+               </Section>
+               <Section type="1">
+                  <Title>Femoral Implant Summary</Title>
+                  <Subs>
+                     <Sub>
+                        <Label>Femoral Implant Size</Label>
+                        <Button/>
+                        <Value Units="" ValueIndex="">FemSize</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Flexion</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="1">FemRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Varus/valgus</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="2">FemRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Axial Rotation</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="3">FemRot</Value>
+                     </Sub>
+                  </Subs>
+               </Section>
+            </Sections>
+            <STLs>
+               <STL>
+                  <Name>Tibia</Name>
+                  <Size/>
+                  <Material aRed="0.84706" bGreen="0.83137" cBlue="0.74118" dAlpha="0.75" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">0.8944116 -0.4775803 0.00915719 36.55064 0.4710067 0.8850114 0.15181 191.5994 -0.07839959 -0.1278694 0.9886875 86.06053 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+               <STL>
+                  <Name>TibiaMedOxRight</Name>
+                  <Size>TibSize</Size>
+                  <Material aRed="0.3" bGreen="0.3" cBlue="0.3" dAlpha="1" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">1 0 0 18.9999 0 1 0 0 0 0 1 -13.9277 0 0 0 1</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">TibTrans</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">TibRot</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+               <STL>
+                  <Name>Femur</Name>
+                  <Size/>
+                  <Material aRed="0.84706" bGreen="0.83137" cBlue="0.74118" dAlpha="0.75" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">0.8944116 -0.4775803 0.00915719 36.55064 0.4710067 0.8850114 0.15181 191.5994 -0.07839959 -0.1278694 0.9886875 86.06053 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+               <STL>
+                  <Name>FemOx</Name>
+                  <Size>FemSize</Size>
+                  <Material aRed="0.3" bGreen="0.3" cBlue="0.3" dAlpha="1" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">-1.00812 0.0178883 0.107257 19.4404 1.60749e-16 -1.00016 0.166805 8.99107 0.10724 0.163558 0.980688 11.5277 0 0 0 1</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">FemTrans</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">FemRot</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+            </STLs>
+         </ScreenShot>
+         <ScreenShot>
+            <Name>Rear</Name>
+            <Thumbnail height="100" width="100"/>
+            <PopupImage height="1000" width="1000"/>
+            <InitialCamera X="-0.707" Y="-0.707" Z="0"/>
+            <Text>Please Review the position of both components</Text>
+            <Sections>
+               <Section type="1">
+                  <Title>Tibial Implant Summary</Title>
+                  <Subs>
+                     <Sub>
+                        <Label>Tibial Implant Size</Label>
+                        <Button/>
+                        <Value Units="" ValueIndex="">TibSize</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Posterior Slope</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="1">TibRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Medial Slope</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="2">TibRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Axial Rotation</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="3">TibRot</Value>
+                     </Sub>
+                  </Subs>
+               </Section>
+               <Section type="1">
+                  <Title>Femoral Implant Summary</Title>
+                  <Subs>
+                     <Sub>
+                        <Label>Femoral Implant Size</Label>
+                        <Button/>
+                        <Value Units="" ValueIndex="">FemSize</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Flexion</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="1">FemRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Varus/valgus</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="2">FemRot</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Axial Rotation</Label>
+                        <Button/>
+                        <Value Units="Degrees" ValueIndex="3">FemRot</Value>
+                     </Sub>
+                  </Subs>
+               </Section>
+            </Sections>
+            <STLs>
+               <STL>
+                  <Name>Tibia</Name>
+                  <Size/>
+                  <Material aRed="0.84706" bGreen="0.83137" cBlue="0.74118" dAlpha="0.75" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">0.8944116 -0.4775803 0.00915719 36.55064 0.4710067 0.8850114 0.15181 191.5994 -0.07839959 -0.1278694 0.9886875 86.06053 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+               <STL>
+                  <Name>TibiaMedOxRight</Name>
+                  <Size>TibSize</Size>
+                  <Material aRed="0.3" bGreen="0.3" cBlue="0.3" dAlpha="1" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">1 0 0 18.9999 0 1 0 0 0 0 1 -13.9277 0 0 0 1</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">TibTrans</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">TibRot</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+               <STL>
+                  <Name>Femur</Name>
+                  <Size/>
+                  <Material aRed="0.84706" bGreen="0.83137" cBlue="0.74118" dAlpha="0.75" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">0.8944116 -0.4775803 0.00915719 36.55064 0.4710067 0.8850114 0.15181 191.5994 -0.07839959 -0.1278694 0.9886875 86.06053 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+               <STL>
+                  <Name>FemOx</Name>
+                  <Size>FemSize</Size>
+                  <Material aRed="0.3" bGreen="0.3" cBlue="0.3" dAlpha="1" eVisible="1"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">-1.00812 0.0178883 0.107257 19.4404 1.60749e-16 -1.00016 0.166805 8.99107 0.10724 0.163558 0.980688 11.5277 0 0 0 1</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">FemTrans</Value>
+                     </Matrix>
+                     <Matrix>
+                        <Value Type="Edit">FemRot</Value>
+                     </Matrix>
+                  </Matrices>
+               </STL>
+            </STLs>
+         </ScreenShot>
+      </ScreenShots>
+   </ApprovePlan>
+   <Tabs>
+      <Tab>
+         <Label>OVERVIEW</Label>
+         <Title/>
+         <Text>This case has been planned and is ready for your review.</Text>
+         <Sections>
+            <Section type="1">
+               <Title>Plan Summary</Title>
+               <Subs>
+                  <Sub>
+                     <Label>Tibial Implant</Label>
+                     <Button/>
+                     <Value Units="" ValueIndex="">TibSize</Value>
+                  </Sub>
+                  <Sub>
+                     <Label>Femoral Implant</Label>
+                     <Button/>
+                     <Value Units="" ValueIndex="">FemSize</Value>
+                  </Sub>
+                  <Sub>
+                     <Label>Pre-Op Varus</Label>
+                     <Button/>
+                     <Value Units="Degrees" ValueIndex="1">4</Value>
+                  </Sub>
+               </Subs>
+            </Section>
+         </Sections>
+         <InitialCamera X="0" Y="1" Z="0" Zoom="1"/>
+         <STLs>
+            <STL>
+               <Name>Tibia</Name>
+               <Size/>
+               <Material aRed="0.84706" bGreen="0.83137" cBlue="0.74118" dAlpha="0.75" eVisible="1"/>
+               <Matrices>
+                  <Matrix>
+                     <Value Type="Static">0.8944116 -0.4775803 0.00915719 36.55064 0.4710067 0.8850114 0.15181 191.5994 -0.07839959 -0.1278694 0.9886875 86.06053 0 0 0 1</Value>
+                  </Matrix>
+               </Matrices>
+            </STL>
+            <STL>
+               <Name>Femur</Name>
+               <Size/>
+               <Material aRed="0.84706" bGreen="0.83137" cBlue="0.74118" dAlpha="0.75" eVisible="1"/>
+               <Matrices>
+                  <Matrix>
+                     <Value Type="Static">0.8944116 -0.4775803 0.00915719 36.55064 0.4710067 0.8850114 0.15181 191.5994 -0.07839959 -0.1278694 0.9886875 86.06053 0 0 0 1</Value>
+                  </Matrix>
+               </Matrices>
+            </STL>
+            <STL>
+               <Name>TibiaMedOxRight</Name>
+               <Size>TibSize</Size>
+               <Material aRed="0.3" bGreen="0.3" cBlue="0.3" dAlpha="1" eVisible="1"/>
+               <Matrices>
+                  <Matrix>
+                     <Value Type="Static">1 0 0 18.9999 0 1 0 0 0 0 1 -13.9277 0 0 0 1</Value>
+                  </Matrix>
+                  <Matrix>
+                     <Value Type="Edit">TibTrans</Value>
+                  </Matrix>
+                  <Matrix>
+                     <Value Type="Edit">TibRot</Value>
+                  </Matrix>
+               </Matrices>
+            </STL>
+            <STL>
+               <Name>FemOx</Name>
+               <Size>FemSize</Size>
+               <Material aRed="0.3" bGreen="0.3" cBlue="0.3" dAlpha="1" eVisible="1"/>
+               <Matrices>
+                  <Matrix>
+                     <Value Type="Static">-1.00812 0.0178883 0.107257 19.4404 1.60749e-16 -1.00016 0.166805 8.99107 0.10724 0.163558 0.980688 11.5277 0 0 0 1</Value>
+                  </Matrix>
+                  <Matrix>
+                     <Value Type=""/>
+                  </Matrix>
+                  <Matrix>
+                     <Value Type=""/>
+                  </Matrix>
+                  <Matrix>
+                     <Value Type="Edit">FemTrans</Value>
+                  </Matrix>
+                  <Matrix>
+                     <Value Type="Edit">FemRot</Value>
+                  </Matrix>
+               </Matrices>
+            </STL>
+         </STLs>
+         <Lines>
+            <Line>
+               <LineName>Mechanical Axis</LineName>
+               <Points>
+                  <Point X="-56.5485" Y="-158.51" Z="364.5213"/>
+                  <Point X="-79.0994" Y="-81.9392" Z="-539.0025"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">0.8944116 -0.4775803 0.00915719 36.55064 0.4710067 0.8850114 0.15181 191.5994 -0.07839959 -0.1278694 0.9886875 86.06053 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </Points>
+               <Material aRed="1" bGreen="0" cBlue="0" dAlpha="1" eVisible="1"/>
+            </Line>
+            <Line>
+               <LineName>Femoral Axis</LineName>
+               <Points>
+                  <Point X="-56.5485" Y="-158.51" Z="364.5213"/>
+                  <Point X="-112.8242" Y="-136.9442" Z="-113.7031"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">0.8944116 -0.4775803 0.00915719 36.55064 0.4710067 0.8850114 0.15181 191.5994 -0.07839959 -0.1278694 0.9886875 86.06053 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </Points>
+               <Material aRed="0" bGreen="1" cBlue="0" dAlpha="1" eVisible="1"/>
+            </Line>
+            <Line>
+               <LineName>Tibial Axis</LineName>
+               <Points>
+                  <Point X="-79.0994" Y="-81.9392" Z="-539.0025"/>
+                  <Point X="-112.8242" Y="-136.9442" Z="-113.7031"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">0.8944116 -0.4775803 0.00915719 36.55064 0.4710067 0.8850114 0.15181 191.5994 -0.07839959 -0.1278694 0.9886875 86.06053 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </Points>
+               <Material aRed="0" bGreen="1" cBlue="0" dAlpha="1" eVisible="1"/>
+            </Line>
+         </Lines>
+      </Tab>
+      <Tab>
+         <Label>TIBIAL IMPLANT</Label>
+         <Title/>
+         <Text>Use the +/- buttons to adjust the plan.</Text>
+         <Sections>
+            <Section type="1">
+               <Title>Implant Size</Title>
+               <Subs>
+                  <Sub>
+                     <Label>Tibial Implant</Label>
+                     <Button>
+                        <Style>UpDown</Style>
+                        <Action>SelectSTL</Action>
+                        <Parameter ParameterStep="1" ValueIndex="">TibSize</Parameter>
+                     </Button>
+                     <Value Units="" ValueIndex="">TibSize</Value>
+                  </Sub>
+               </Subs>
+            </Section>
+            <Section type="2">
+               <Title>Implant Position</Title>
+               <Subs>
+                  <Sub>
+                     <Label>Posterior Slope</Label>
+                     <Button>
+                        <Style>UpDown</Style>
+                        <Action>Rotate</Action>
+                        <Parameter ParameterStep="0.31373" ValueIndex="1">TibRot</Parameter>
+                     </Button>
+                     <Value Units="Degrees" ValueIndex="1">TibRot</Value>
+                  </Sub>
+                  <Sub>
+                     <Label>Medial Slope</Label>
+                     <Button>
+                        <Style>UpDown</Style>
+                        <Action>Rotate</Action>
+                        <Parameter ParameterStep="0.31373" ValueIndex="2">TibRot</Parameter>
+                     </Button>
+                     <Value Units="Degrees" ValueIndex="2">TibRot</Value>
+                  </Sub>
+                  <Sub>
+                     <Label>Axial Rotation</Label>
+                     <Button>
+                        <Style>UpDown</Style>
+                        <Action>Rotate</Action>
+                        <Parameter ParameterStep="0.31373" ValueIndex="3">TibRot</Parameter>
+                     </Button>
+                     <Value Units="Degrees" ValueIndex="3">TibRot</Value>
+                  </Sub>
+                  <Sub>
+                     <Label>Medial</Label>
+                     <Button>
+                        <Style>UpDown</Style>
+                        <Action>Translate</Action>
+                        <Parameter ParameterStep="0.31373" ValueIndex="1">TibTrans</Parameter>
+                     </Button>
+                     <Value Units="mm" ValueIndex="1">TibTrans</Value>
+                  </Sub>
+                  <Sub>
+                     <Label>Anterior</Label>
+                     <Button>
+                        <Style>UpDown</Style>
+                        <Action>Translate</Action>
+                        <Parameter ParameterStep="0.31373" ValueIndex="2">TibTrans</Parameter>
+                     </Button>
+                     <Value Units="mm" ValueIndex="2">TibTrans</Value>
+                  </Sub>
+                  <Sub>
+                     <Label>Proximal</Label>
+                     <Button>
+                        <Style>UpDown</Style>
+                        <Action>Translate</Action>
+                        <Parameter ParameterStep="0.31373" ValueIndex="3">TibTrans</Parameter>
+                     </Button>
+                     <Value Units="mm" ValueIndex="3">TibTrans</Value>
+                  </Sub>
+               </Subs>
+            </Section>
+            <Section type="3">
+               <Title/>
+               <Subs>
+                  <Sub>
+                     <Label>View Cut Bone</Label>
+                     <Button>
+                        <Style>CheckBox</Style>
+                        <Action>Boolean</Action>
+                        <BaseObject>Tibia</BaseObject>
+                        <SubtractionLib>TibiaMedOxRight</SubtractionLib>
+                        <SubtractionSize>TibSize</SubtractionSize>
+                        <SubstractionPlanes>
+                           <SubstractionPlane eFillHole="1" eVisible="1">
+                              <Vertices>
+                                 <Vertice X="20" Y="0" Z="-10"/>
+                                 <Vertice X="-20" Y="0" Z="-10"/>
+                                 <Vertice X="-20" Y="0" Z="30"/>
+                                 <Vertice X="20" Y="0" Z="30"/>
+                              </Vertices>
+                           </SubstractionPlane>
+                        </SubstractionPlanes>
+                     </Button>
+                     <Value Units="" ValueIndex="">1</Value>
+                  </Sub>
+               </Subs>
+            </Section>
+         </Sections>
+         <InitialCamera X="0" Y="1" Z="0" Zoom="3"/>
+         <STLs>
+            <STL>
+               <Name>Tibia</Name>
+               <Size/>
+               <Material aRed="0.84706" bGreen="0.83137" cBlue="0.74118" dAlpha="0.75" eVisible="1"/>
+               <Matrices>
+                  <Matrix>
+                     <Value Type="Static">0.8944116 -0.4775803 0.00915719 36.55064 0.4710067 0.8850114 0.15181 191.5994 -0.07839959 -0.1278694 0.9886875 86.06053 0 0 0 1</Value>
+                  </Matrix>
+               </Matrices>
+            </STL>
+            <STL>
+               <Name>TibiaMedOxRight</Name>
+               <Size>TibSize</Size>
+               <Material aRed="0.3" bGreen="0.3" cBlue="0.3" dAlpha="1" eVisible="1"/>
+               <Matrices>
+                  <Matrix>
+                     <Value Type="Static">1 0 0 18.9999 0 1 0 0 0 0 1 -13.9277 0 0 0 1</Value>
+                  </Matrix>
+                  <Matrix>
+                     <Value Type="Edit">TibTrans</Value>
+                  </Matrix>
+                  <Matrix>
+                     <Value Type="Edit">TibRot</Value>
+                  </Matrix>
+               </Matrices>
+            </STL>
+         </STLs>
+         <Lines>
+            <Line>
+               <LineName>Mechanical Axis</LineName>
+               <Points>
+                  <Point X="-79.0994" Y="-81.9392" Z="-539.0025"/>
+                  <Point X="-112.8242" Y="-136.9442" Z="-113.7031"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">0.8944116 -0.4775803 0.00915719 36.55064 0.4710067 0.8850114 0.15181 191.5994 -0.07839959 -0.1278694 0.9886875 86.06053 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </Points>
+               <Material aRed="0" bGreen="1" cBlue="0" dAlpha="1" eVisible="1"/>
+            </Line>
+            <Line>
+               <LineName>X</LineName>
+               <Points>
+                  <Point X="0" Y="0" Z="0"/>
+                  <Point X="10" Y="0" Z="0"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </Points>
+               <Material aRed="1" bGreen="0" cBlue="0" dAlpha="1" eVisible="1"/>
+            </Line>
+            <Line>
+               <LineName>Y</LineName>
+               <Points>
+                  <Point X="0" Y="0" Z="0"/>
+                  <Point X="0" Y="10" Z="0"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </Points>
+               <Material aRed="0" bGreen="1" cBlue="0" dAlpha="1" eVisible="1"/>
+            </Line>
+            <Line>
+               <LineName>Z</LineName>
+               <Points>
+                  <Point X="0" Y="0" Z="0"/>
+                  <Point X="0" Y="0" Z="10"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </Points>
+               <Material aRed="0" bGreen="0" cBlue="1" dAlpha="1" eVisible="1"/>
+            </Line>
+         </Lines>
+      </Tab>
+      <Tab>
+         <Label>FEMORAL IMPLANT</Label>
+         <Title/>
+         <Text>Use the +/- buttons to adjust the plan.</Text>
+         <Sections>
+            <Section type="1">
+               <Title>Implant Size</Title>
+               <Subs>
+                  <Sub>
+                     <Label>Femoral Implant</Label>
+                     <Button>
+                        <Style>UpDown</Style>
+                        <Action>SelectSTL</Action>
+                        <Parameter ParameterStep="1" ValueIndex="">FemSize</Parameter>
+                     </Button>
+                     <Value Units="" ValueIndex="">FemSize</Value>
+                  </Sub>
+               </Subs>
+            </Section>
+            <Section type="2">
+               <Title>Implant Position</Title>
+               <Subs>
+                  <Sub>
+                     <Label>Flexion</Label>
+                     <Button>
+                        <Style>UpDown</Style>
+                        <Action>Rotate</Action>
+                        <Parameter ParameterStep="0.31373" ValueIndex="1">FemRot</Parameter>
+                     </Button>
+                     <Value Units="Degrees" ValueIndex="1">FemRot</Value>
+                  </Sub>
+                  <Sub>
+                     <Label>Varus/Valgus</Label>
+                     <Button>
+                        <Style>UpDown</Style>
+                        <Action>Rotate</Action>
+                        <Parameter ParameterStep="0.31373" ValueIndex="2">FemRot</Parameter>
+                     </Button>
+                     <Value Units="Degrees" ValueIndex="2">FemRot</Value>
+                  </Sub>
+                  <Sub>
+                     <Label>Axial Rotation</Label>
+                     <Button>
+                        <Style>UpDown</Style>
+                        <Action>Rotate</Action>
+                        <Parameter ParameterStep="0.31373" ValueIndex="3">FemRot</Parameter>
+                     </Button>
+                     <Value Units="Degrees" ValueIndex="3">FemRot</Value>
+                  </Sub>
+                  <Sub>
+                     <Label>Medial</Label>
+                     <Button>
+                        <Style>UpDown</Style>
+                        <Action>Translate</Action>
+                        <Parameter ParameterStep="0.31373" ValueIndex="1">FemTrans</Parameter>
+                     </Button>
+                     <Value Units="mm" ValueIndex="1">FemTrans</Value>
+                  </Sub>
+                  <Sub>
+                     <Label>Anterior</Label>
+                     <Button>
+                        <Style>UpDown</Style>
+                        <Action>Translate</Action>
+                        <Parameter ParameterStep="0.31373" ValueIndex="2">FemTrans</Parameter>
+                     </Button>
+                     <Value Units="mm" ValueIndex="2">FemTrans</Value>
+                  </Sub>
+                  <Sub>
+                     <Label>Proximal</Label>
+                     <Button>
+                        <Style>UpDown</Style>
+                        <Action>Translate</Action>
+                        <Parameter ParameterStep="0.31373" ValueIndex="3">FemTrans</Parameter>
+                     </Button>
+                     <Value Units="mm" ValueIndex="3">FemTrans</Value>
+                  </Sub>
+               </Subs>
+            </Section>
+            <Section type="3">
+               <Title/>
+               <Subs>
+                  <Sub>
+                     <Label>View Cut Bone</Label>
+                     <Button>
+                        <Style>CheckBox</Style>
+                        <Action>Boolean</Action>
+                        <BaseObject>Femur</BaseObject>
+                        <SubtractionLib>FemOx</SubtractionLib>
+                        <SubtractionSize>FemSize</SubtractionSize>
+                        <SubstractionPlanes>
+                           <SubstractionPlane eFillHole="1" eVisible="1">
+                              <Vertices>
+                                 <Vertice X="20" Y="0" Z="-10"/>
+                                 <Vertice X="-20" Y="0" Z="-10"/>
+                                 <Vertice X="-20" Y="0" Z="30"/>
+                                 <Vertice X="20" Y="0" Z="30"/>
+                              </Vertices>
+                           </SubstractionPlane>
+                        </SubstractionPlanes>
+                     </Button>
+                     <Value Units="" ValueIndex="">1</Value>
+                  </Sub>
+               </Subs>
+            </Section>
+         </Sections>
+         <InitialCamera X="0" Y="0" Z="-1" Zoom="3"/>
+         <STLs>
+            <STL>
+               <Name>Femur</Name>
+               <Size/>
+               <Material aRed="0.84706" bGreen="0.83137" cBlue="0.74118" dAlpha="0.75" eVisible="1"/>
+               <Matrices>
+                  <Matrix>
+                     <Value Type="Static">-0.8771883 0.4702914 0.09678133 -19.30742 -0.4710859 -0.8819439 0.01590826 -177.6502 0.09283722 -0.03163778 0.9951785 99.5585 0 0 0 1</Value>
+                  </Matrix>
+               </Matrices>
+            </STL>
+            <STL>
+               <Name>FemOx</Name>
+               <Size>FemSize</Size>
+               <Material aRed="0.3" bGreen="0.3" cBlue="0.3" dAlpha="1" eVisible="1"/>
+               <Matrices>
+                  <Matrix>
+                     <Value Type="Static">0.999843 -0.0177413 -1.38778e-17 -13.4546 0.0177413 0.999843 -3.46945e-18 -12.37 -1.38778e-17 -6.93889e-18 1 -4.94627 0 0 0 1</Value>
+                  </Matrix>
+                  <Matrix>
+                     <Value Type="Edit">FemTrans</Value>
+                  </Matrix>
+                  <Matrix>
+                     <Value Type="Edit">FemRot</Value>
+                  </Matrix>
+               </Matrices>
+            </STL>
+         </STLs>
+         <Lines>
+            <Line>
+               <LineName>Mechanical Axis</LineName>
+               <Points>
+                  <Point X="-56.5485" Y="-158.51" Z="364.5213"/>
+                  <Point X="-112.8242" Y="-136.9442" Z="-113.7031"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">-0.8771883 0.4702914 0.09678133 -19.30742 -0.4710859 -0.8819439 0.01590826 -177.6502 0.09283722 -0.03163778 0.9951785 99.5585 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </Points>
+               <Material aRed="0" bGreen="1" cBlue="0" dAlpha="1" eVisible="1"/>
+            </Line>
+            <Line>
+               <LineName>X</LineName>
+               <Points>
+                  <Point X="0" Y="0" Z="0"/>
+                  <Point X="10" Y="0" Z="0"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </Points>
+               <Material aRed="1" bGreen="0" cBlue="0" dAlpha="1" eVisible="1"/>
+            </Line>
+            <Line>
+               <LineName>Y</LineName>
+               <Points>
+                  <Point X="0" Y="0" Z="0"/>
+                  <Point X="0" Y="10" Z="0"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </Points>
+               <Material aRed="0" bGreen="1" cBlue="0" dAlpha="1" eVisible="1"/>
+            </Line>
+            <Line>
+               <LineName>Z</LineName>
+               <Points>
+                  <Point X="0" Y="0" Z="0"/>
+                  <Point X="0" Y="0" Z="10"/>
+                  <Matrices>
+                     <Matrix>
+                        <Value Type="Static">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Value>
+                     </Matrix>
+                  </Matrices>
+               </Points>
+               <Material aRed="0" bGreen="0" cBlue="1" dAlpha="1" eVisible="1"/>
+            </Line>
+         </Lines>
+      </Tab>
+   </Tabs>
+   <PDF>
+      <Pages>
+         <Page>
+            <Title>Plan Summary Page</Title>
+            <ScreenShots>
+               <ScreenShot>
+                  <Name>FemAP</Name>
+                  <Settings alpha="1" height="175" resize="1" rotate="0" width="175" x="0" y="0">
+                     <caption>AP View of Femur, femoral reference frame</caption>
+                     <description/>
+                  </Settings>
+               </ScreenShot>
+               <ScreenShot>
+                  <Name>FemML</Name>
+                  <Settings alpha="1" height="175" resize="1" rotate="0" width="175" x="175" y="0">
+                     <caption>ML View of Femur, femoral reference frame</caption>
+                     <description/>
+                  </Settings>
+               </ScreenShot>
+               <ScreenShot>
+                  <Name>FemAx</Name>
+                  <Settings alpha="1" height="175" resize="1" rotate="0" width="175" x="350" y="0">
+                     <caption>Axial View of Femur, femoral reference frame</caption>
+                     <description/>
+                  </Settings>
+               </ScreenShot>
+               <ScreenShot>
+                  <Name>TibiaAP</Name>
+                  <Settings alpha="1" height="175" resize="1" rotate="0" width="175" x="0" y="175">
+                     <caption>AP View of Tibia, tibial reference frame</caption>
+                     <description/>
+                  </Settings>
+               </ScreenShot>
+               <ScreenShot>
+                  <Name>TibiaML</Name>
+                  <Settings alpha="1" height="175" resize="1" rotate="0" width="175" x="175" y="175">
+                     <caption>ML View of Tibia, tibial reference frame</caption>
+                     <description/>
+                  </Settings>
+               </ScreenShot>
+               <ScreenShot>
+                  <Name>TibiaAx</Name>
+                  <Settings alpha="1" height="175" resize="1" rotate="0" width="175" x="350" y="175">
+                     <caption>Axial View of Tibia, tibial reference frame</caption>
+                     <description/>
+                  </Settings>
+               </ScreenShot>
+            </ScreenShots>
+            <Sections>
+               <Section>
+                  <Title>Implant Summary</Title>
+                  <Text>These implant details have been approved and will be used to plan guide maufacture, if requested. Please review and ensure that you are happy with these parameters.</Text>
+                  <Subs>
+                     <Sub>
+                        <Label>Tibial Size</Label>
+                        <Button/>
+                        <Value Units="" ValueIndex="">TibSize</Value>
+                     </Sub>
+                     <Sub>
+                        <Label>Femoral Size</Label>
+                        <Button/>
+                        <Value Units="" ValueIndex="">FemSize</Value>
+                     </Sub>
+                  </Subs>
+               </Section>
+            </Sections>
+         </Page>
+      </Pages>
+   </PDF>
+</PlanObject>

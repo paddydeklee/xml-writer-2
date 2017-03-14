@@ -16,61 +16,23 @@ var argv    = require('yargs')
   .argv
 
 // the directory where plans are kept
-var baseDir = path.resolve('../planner/plan'+argv.c)
-console.log("BASEDIR:", baseDir)
+baseDir = '../planner'
 
-
-const fileandproperty = 
-[
-  {file: "nextFile.xml", properties: ['side', 'name', 'tool']},
-  {file: "planFile.txt", properties: ['tibia', 'slope', 'etc']}
-]
-
-
-var JSONPromises = fileandproperty
-  .map( function(item, i ){
-    console.log('FileAndProperty', i, ": ", item);
-    console.log(path.join( baseDir, item.file))
-    return getJSON( path.join( path.resolve(baseDir), item.file) );
-  } )
-
-console.log("THis is probably all promises: ", JSONPromises)
-
-Promise.all(JSONPromises)
-  .then( function(allJSONPromises) {   
-    return allJSONPromises.reduce(function( newarr, item, i, arr ){
-       console.log('PROPS INPUT: ', fileandproperty[i].properties)
-       var selectedprops = fileandproperty[i].properties.map(function(key){ 
-          console.log( 'ITEM PROP', item['tags'][key][0] );
-          return item['tags'][key][0] 
-        })
-       console.log('SEL PROPS: ', selectedprops)
-       var filetag = fileandproperty[i].file
-       newarr[i] = { [filetag]: selectedprops }
-       return newarr
-    }, [])
-  })
-  .catch( function(err){console.log(err)})
-  .then(function(arr){console.log('THIS IT THE RESULT: ', arr)})
-
-
-
-
-// // find directory using input args
+// find directory using input args
 // var directory = path.join(Finder.in(baseDir).findDirectories('plan'+argv.c).toString());
 // // console.log(directory)
 
-// // // find plan file within the target planner directory
+// // find plan file within the target planner directory
 // var planFile = path.join(Finder.from(directory).findFiles('planFile.txt').toString());
-// // console.log('1: plan file identified = '+planFile)
+// console.log('1: plan file identified = '+planFile)
 
-// // // find the next file withing the target planner directory
+// // find the next file withing the target planner directory
 // var nextFile = path.join(Finder.from(directory).findFiles('next*').toString());
-// // console.log('2: next file identified = '+nextFile)
+// console.log('2: next file identified = '+nextFile)
 
-// // // find plan file within the target planner directory
+// // find plan file within the target planner directory
 // var xmlFile = path.join(Finder.from(directory).findFiles('default*').toString());
-// // console.log('*: deafult xml file identified = '+xmlFile)
+// console.log('*: deafult xml file identified = '+xmlFile)
 
 
 // 1 Read the files then create an object
@@ -79,18 +41,21 @@ var parser = new xml2js.Parser();
 
 var builder = new xml2js.Builder();
 
-function getJSON (xmlFile){
+function getJSON (){
   return new Promise(function(resolve, reject){
 
 
-  fs.readFile(xmlFile,  'UTF-8',function(err, data) {
-      console.log("FILE CONTENT: ", xmlFile, " -> ", data)
+  fs.readFile(__dirname + '/sample_plan.xml',  'UTF-8',function(err, data) {
+      // console.log(data)
       parser.parseString(data, function (err, result) {
+        // console.log(result)
 
           if(err){
-            reject('couldn\'t find the file!' + err)
+
+            reject('couldn\'t find the file!')
+
           } 
-          console.log("RESULT: ", xmlFile, " -> ", result)
+
           resolve(result) // this will have to be an array of objects passed in to the build XML builder because it will be reading multiple files
 
           // console.dir(result);
@@ -101,11 +66,10 @@ function getJSON (xmlFile){
 }
 
 
-
 function buildXML(jsonPlan){
-  console.log(jsonPlan)
+
   var xml = builder.buildObject(jsonPlan);
-  // console.log(xml)
+  // console.log(jsonPlan)
 }
 
 function writeXML(xml){
@@ -124,7 +88,7 @@ getJSON().then(function (data){
   // console.log(jsonPlan.PlanObject.CaseDetails)
   return buildXML(data)
 }, function (error){
-  console.log(error)
+  // console.log(error)
 }) // chain another promise to get the saveXML to correct planner folder!
 
 
