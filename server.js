@@ -13,7 +13,7 @@ var argv = require('yargs')
 
 var plannerFolder;
 
-// read folders in planner folder
+// read folders in planner folder (could be better to be done sync) then check the folder does exist
 var folders = fs.readdir('../planner', function(err, folders){
 
     if (err){
@@ -23,7 +23,7 @@ var folders = fs.readdir('../planner', function(err, folders){
     console.log(folders)
     // take the arg caseID and use it to find the correct planner folder
     if (argv.c.length > 0) {
-      
+
         console.log('case ID was provided: ' + argv.c)
         var caseID = argv.c;
         var matchedCase;
@@ -37,7 +37,7 @@ var folders = fs.readdir('../planner', function(err, folders){
           if (plannerFolder === caseID){
             console.log('matching ' + plannerFolder + ' with ' + caseID)
 
-            return plannerFolder
+            return callback(plannerFolder)
 
           }
 
@@ -50,6 +50,20 @@ var folders = fs.readdir('../planner', function(err, folders){
       }
 
   })
+
+function callback(plannerFolder){
+  console.log('callback has been called!')
+  var folder = readdir('../planner/plan'+plannerFolder, function(err, folders) { 
+
+    if (err){
+      throw err
+    }
+
+    console.log(folder)
+  })
+}
+
+
 
 console.log('..reading planner folders')
 
