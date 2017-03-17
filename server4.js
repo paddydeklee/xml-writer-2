@@ -29,22 +29,23 @@ const fileandproperty =
 
 var JSONPromises = fileandproperty
   .map( function(item, i ){
-    console.log('FileAndProperty', i, ": ", item);
-    console.log(path.join( baseDir, item.file))
+    // console.log('FileAndProperty', i, ": ", item);
+    // console.log(path.join( baseDir, item.file))
     return getJSON( path.join( path.resolve(baseDir), item.file) );
   } )
 
-console.log("THis is probably all promises: ", JSONPromises)
+// console.log("THis is probably all promises: ", JSONPromises)
 
 Promise.all(JSONPromises)
-  .then( function(allJSONPromises) {   
+  .then( function(allJSONPromises) { 
+  console.log('Promises to be reduced -> ',JSONPromises)  
     return allJSONPromises.reduce(function( newarr, item, i, arr ){
-       console.log('PROPS INPUT: ', fileandproperty[i].properties)
+       // console.log('PROPS INPUT: ', fileandproperty[i].properties)
        var selectedprops = fileandproperty[i].properties.map(function(key){ 
-          console.log( 'ITEM PROP', item['tags'][key][0] );
+          // console.log( 'ITEM PROP', item['tags'][key][0] );
           return item['tags'][key][0] 
         })
-       console.log('SEL PROPS: ', selectedprops)
+       // console.log('SEL PROPS: ', selectedprops)
        var filetag = fileandproperty[i].file
        newarr[i] = { [filetag]: selectedprops }
        return newarr
