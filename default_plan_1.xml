@@ -1,2 +1,42 @@
-<tag>20</tag>
-<next>left</next>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PlanObject>
+  <GenericInfo>
+    <Type>UKR</Type>
+    <Libraries>
+      <Library>
+        <Name>Tibia</Name>
+        <LibrarySource type="Upload">Tibia.stl</LibrarySource>
+      </Library>
+      <Library>
+        <Name>Femur</Name>
+        <LibrarySource type="Upload">Femur.stl</LibrarySource>
+      </Library>
+      <Library>
+        <Name>FemOx</Name>
+        <LibrarySource>
+          <-type>Read</-type>
+        </LibrarySource>
+      </Library>
+      <Library>
+        <Name>TibiaLatOxLeft</Name>
+        <LibrarySource>
+          <-type>Read</-type>
+        </LibrarySource>
+      </Library>
+      <Library>
+        <Name>LatOxBear</Name>
+        <LibrarySource>
+          <-type>Read</-type>
+        </LibrarySource>
+      </Library>
+    </Libraries>
+  </GenericInfo>
+  <CaseDetails>
+    <CaseID/>
+    <Version>1</Version>
+    <Author>PDK</Author>
+    <Date/>
+    <Side>Right</Side>
+    <Condyle/>
+  </CaseDetails>
+</PlanObject>
