@@ -5,6 +5,8 @@ var path        = require('path')
 var Finder      = require('fs-finder');
 var xml2js      = require('xml2js');
 var util        = require('util')
+var planStructure = require('./planStructure')()
+
 
 console.log(typeof js2xmlparser)
 
@@ -21,60 +23,37 @@ var argv    = require('yargs')
 var baseDir = path.resolve('../planner/plan'+argv.c)
 var planFile = path.resolve(Finder.from(baseDir).findFiles('planFile').toString());
 var nextFile = path.join(Finder.from(baseDir).findFiles('next*').toString());
+// var targetFile =
 
 var jsonPlan;
 var parser = new xml2js.Parser();
 var builder = new xml2js.Builder({explicitCharkey: true});
 
-var planStructure = {
-  PlanObject:{
-    GenericInfo: {
-      Type: 'UKR',
-      Libraries: {
-        Library: [
-          {
-            Name: "Tibia",
-            LibrarySource: {
-              '$':{
-                'type': "Upload"
-              },
-              '_':"Tibia.stl"
-            }
-          },
-          {
-            Name: "Femur",
-            LibrarySource: {
-              '$':{
-                'type': "Upload"
-              },
-              '_':"Femur.stl"
-            }
-          },
-          {
-            Name: "FemOx",
-            LibrarySource: { "-type": "Read" }
-          },
-          {
-            Name: "TibiaLatOxLeft",
-            LibrarySource: { "-type": "Read" }
-          },
-          {
-            Name: "LatOxBear",
-            LibrarySource: { "-type": "Read" }
-          }
-        ]
-      }
-    },
-    CaseDetails:{
-      CaseID:'',
-      Version: 1,
-      Author: 'SGC',
-      Date: '',
-      Side: '',
-      Condyle: ''
+// will need a function to copy the files to the server location
+function copyFile(source, target, cb) {
+  var cbCalled = false;
+
+  var rd = fs.createReadStream(source);
+  rd.on("error", function(err) {
+    done(err);
+  });
+  var wr = fs.createWriteStream(target);
+  wr.on("error", function(err) {
+    done(err);
+  });
+  wr.on("close", function(ex) {
+    done();
+  });
+  rd.pipe(wr);
+
+  function done(err) {
+    if (!cbCalled) {
+      cb(err);
+      cbCalled = true;
     }
   }
 }
+
 
 // FUNCTION 1
 // Fetch the XML from the correct directory and transform into a JS object
@@ -126,11 +105,13 @@ var planStructure = {
 // FUNCTION 4
 // Write the XML to the correct location
   function writeXML(xml){
-      fs.writeFile('default_plan_1.xml', xml, function(err){
+      fs.writeFile('default_plan_'+argv.c+'.xml', xml, function(err){
         if (err) throw err;
         console.log('The file has been saved!');
       });
     }
+
+
 
   getXML(planFile)
   .then(transformIntoJSON)
@@ -139,13 +120,73 @@ var planStructure = {
   .catch('error')
 
 
-  function testBuildXML(jsonPlan){
-    return new Promise(function(resolve, reject){
-      console.log(jsonPlan)
-        var xml = builder.buildObject(jsonPlan);
-      console.log(xml)
-    })
-  }
+
+
+// will need this to decrypt the relevant Files
+  const execFile = require('child_process').execFile;
+  const child = execFile('git', ['--version'], (error, stdout, stderr) => {
+    if (error) {
+      throw error;
+    }
+    console.log(stdout);
+  });
+
+// then can run the file through the Function 1-4
+
+// finally will need to adjust the functionality so that it loops through several files to build the JS object!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // function testBuildXML(jsonPlan){
+  //   return new Promise(function(resolve, reject){
+  //     console.log(jsonPlan)
+  //       var xml = builder.buildObject(jsonPlan);
+  //     console.log(xml)
+  //   })
+  // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // testBuildXML(planStructure)
 

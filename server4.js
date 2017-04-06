@@ -20,7 +20,7 @@ var baseDir = path.resolve('../planner/plan'+argv.c)
 console.log("BASEDIR:", baseDir)
 
 
-const fileandproperty = 
+const fileandproperty =
 [
   {file: "nextFile.xml", properties: ['side', 'name', 'tool']},
   {file: "planFile.txt", properties: ['tibia', 'slope', 'etc']}
@@ -37,13 +37,13 @@ var JSONPromises = fileandproperty
 // console.log("THis is probably all promises: ", JSONPromises)
 
 Promise.all(JSONPromises)
-  .then( function(allJSONPromises) { 
-  console.log('Promises to be reduced -> ',JSONPromises)  
+  .then( function(allJSONPromises) {
+  console.log('Promises to be reduced -> ',JSONPromises)
     return allJSONPromises.reduce(function( newarr, item, i, arr ){
        // console.log('PROPS INPUT: ', fileandproperty[i].properties)
-       var selectedprops = fileandproperty[i].properties.map(function(key){ 
+       var selectedprops = fileandproperty[i].properties.map(function(key){
           // console.log( 'ITEM PROP', item['tags'][key][0] );
-          return item['tags'][key][0] 
+          return item['tags'][key][0]
         })
        // console.log('SEL PROPS: ', selectedprops)
        var filetag = fileandproperty[i].file
@@ -90,7 +90,7 @@ function getJSON (xmlFile){
 
           if(err){
             reject('couldn\'t find the file!' + err)
-          } 
+          }
           console.log("RESULT: ", xmlFile, " -> ", result)
           resolve(result) // this will have to be an array of objects passed in to the build XML builder because it will be reading multiple files
 
@@ -160,42 +160,41 @@ getJSON().then(function (data){
 // read the file contents and write the file
 // actually it would be better to save the data to a json object before beginning any of the write functions
 // ************
-// var contents = fs.readFile(planFile, 'UTF-8', function(err, contents){
-  
-//   if (err){
+var contents = fs.readFile(planFile, 'UTF-8', function(err, contents){
 
-//     console.log(err)
+  if (err){
 
-//   }
+    console.log(err)
 
-//     fs.writeFile('default_plan_' + argv.c + '.xml', contents+'\n', function(err){
-//       console.log('3: file created!')
+  }
+
+    fs.writeFile('default_plan_' + argv.c + '.xml', contents+'\n', function(err){
+      console.log('3: file created!')
 
 
-//       var nextContents = fs.readFile(nextFile, 'UTF-8', function(err, contents){
-        
-//         if (err){
+      var nextContents = fs.readFile(nextFile, 'UTF-8', function(err, contents){
 
-//           console.log(err)
+        if (err){
 
-//         }
+          console.log(err)
 
-//           fs.appendFile('default_plan_' + argv.c + '.xml', contents, function(err){
-//             console.log('4: file appended!')
+        }
 
-//         })
+          fs.appendFile('default_plan_' + argv.c + '.xml', contents, function(err){
+            console.log('4: file appended!')
 
-//         console.log('next file contents: '+contents)
-//       })
+        })
 
-//   })
+        console.log('next file contents: '+contents)
+      })
 
-//   console.log('plan file contents: '+contents)
-// })
+  })
+
+  console.log('plan file contents: '+contents)
+})
 
 
 
 
 
 // append the next tags into the existing file
-
